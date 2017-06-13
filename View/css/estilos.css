@@ -1,0 +1,1792 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-dic-2016, 0:44:32
+    Author     : Zambrana
+*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: #000000;
+  font-family: 'Bree Serif', serif;
+  overflow-y: hidden;
+}
+
+.tituloLogin{
+  position: relative;
+  text-align: center;
+  margin-top: 6%;
+  z-index: 30;
+}
+.tituloLogin img{
+  width: 480px;
+}
+/*//////////////////////////////PAGINA DE INICIO////////////////////////*/
+
+  #acceso{
+    position: absolute;
+    top:55px;
+    left: 81%;
+    width: 215px;
+    height: 50px;
+    padding-left: 10px;
+    z-index: 30;
+    overflow-x: hidden;
+  }
+  #botonRegistro{
+    background: none;
+    font-size: 1.1em;
+    border: none;
+    color: white;
+    margin-right: 10px;
+  }
+  #botonRegistro:hover{
+    text-decoration: underline;
+  }
+  #botonRegistro:focus{
+    outline:0px;
+  }
+  #botonIdentificate{
+    background-color: #f2f2f2;
+    font-size: 1.1em;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    z-index: 30;
+    border: none;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 1rem;
+  }
+  #botonIdentificate:hover{
+    background-color: #e6e6e6;
+  }
+  /*////////////////Cuadro Login//////////////////////////////*/
+  #login{
+    background-color: #e6e6e6;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    z-index: 50;
+  }
+  #login .cerrar {
+    position: absolute;
+    top: 3%;
+    left: 49%;
+    background-color: #e6e6e6;
+    border: none;
+  }
+  #login .cerrar:hover{
+    background-color: #e2e1e1;
+  }
+  #login .cerrar:focus{
+    outline:0px;
+  }
+  #login h1{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #login form span{
+    margin-left: 50px;
+  }
+  #login input{
+    width: 270px;
+  }
+  #login button span{
+    margin-left: 0px;
+  }
+  #login button{
+    margin-left: 135px;
+  }
+  #login form button:hover{
+    background-color: #cccccc;
+  }
+  #capaBloquearBotones{
+    background-color: black;
+    position: fixed;
+    bottom: 0px; 
+    right: 0px; 
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    opacity: 0.7;
+    z-index: 40;
+  }
+  
+  #login #loginformulario #usuarioId-error{
+      margin-left: 30%;
+  }
+  
+  #login #loginformulario #contrasenaId-error{
+      margin-left: 28%;
+  }
+
+  /*////////////////Cuadro Registro//////////////////////////////*/
+  #registro{
+    background-color: #e6e6e6;
+    padding-top: 0px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -400px;
+    margin-top: -300px;
+    width: 800px;
+    height: 600px;
+    border-radius: 15px;
+    box-shadow: 10px 11px 8px 0px black;
+    z-index: 50;
+  }
+  #registro .cerrar {
+    position: absolute;
+    top: 2%;
+    left: 75%;
+    margin-left: 135px;
+    background-color: #e6e6e6;
+    border: none;
+  }
+  #registro .cerrar:hover{
+    background-color: #e2e1e1;
+  }
+  #registro .cerrar:focus{
+    outline:0px;
+  }
+  #registro h1{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #registro td{
+    text-align: center; 
+  }
+  #registro input{
+    width: 320px;
+    text-align: center;
+  }
+  #registro button span{
+    margin-left: 0px;
+  }
+  #registro form button:hover{
+    background-color: #cccccc;
+  }
+  #registro .crearUsuario{
+    margin-top: 15px;
+  }
+
+  /*//////////////////VIDEO DE FONDO//////////////////////////*/
+  #contenedorVideo{
+    background-color: black;
+    width: 100%;
+    height: 55%;
+    position: absolute;
+    top: 350px;
+    margin-top: -170px;
+    z-index: 10;
+    overflow: hidden; 
+  }
+  #sombra{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    box-shadow: 0px 20px 30px 0px black inset, 0px -20px 30px 0px black inset
+  }
+
+  #video_background { 
+    position: absolute;
+    bottom: 0px; 
+    right: 0px; 
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto; 
+    z-index: -10; 
+    overflow: hidden; 
+  }
+
+  #capaNegra{
+    background-color: black;
+    position: fixed;
+    bottom: 0px; 
+    right: 0px; 
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    opacity: 0.6;
+    z-index: 20;
+  }
+
+  /*////////////////////////////Flexbox////////////////////////*/
+  .flex-container{
+    position: absolute;
+    top: 78%;
+    width: 100%;
+    height:250px;
+    z-index: 39;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+  }
+
+  .flex-container-inline{
+    display:-webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .flex-item{
+    width: 15%;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    height: 150px;
+  }
+  .flex-item button {
+    margin-top: 15px;
+  }
+
+  .botonesFooter{
+    color:#333333;
+  }
+
+  .botonesFooter:hover{
+    color:#808080;
+  }
+  .botonesFooterFacebook:hover{
+    color:#3b5998;
+  }
+  .botonesFooterTwitter:hover{
+    color:#55ACEE;
+  }
+
+  /*//////////////////////////Informacion footer////////////////*/
+  .informacion{
+    background-color: #e6e6e6;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -400px;
+    margin-top: -300px;
+    width: 800px;
+    height: 600px;
+    border-radius: 15px;
+    box-shadow: 10px 11px 8px 0px black;
+    z-index: 50;
+  }
+  .informacion p{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 50px;
+  }
+  #enlaceCV img{
+    width: 52%;
+    position: relative;
+    left: 24%;
+    margin-top: 3%;
+  }
+  #enlaceCV h2{
+    text-align: center;
+    color: black;
+  }
+  #enlaceCV h2:hover{
+    text-decoration: underline;
+  }
+  .informacion .cerrar {
+    position: relative;
+    float: right;
+    background-color: #e6e6e6;
+    border: none;
+  }
+  .informacion .cerrar:focus{
+    outline:0px;
+    background-color: #e2e1e1;
+  }
+  
+  /*////////////////////RESPONSIVE DEL LOGIN//////////////////////////////*/
+  @media (max-width: 600px) {
+    .tituloLogin img{
+      margin-top: 15%;
+      width: 350px;
+    }
+    #acceso{
+      top:25px;
+      left: 41%;
+    }
+    #registro{
+      width: 400px;
+      margin-left: -200px;
+    }
+    #registro .cerrar {
+      left: 50%;
+      margin-left: 135px;
+      background-color: #e6e6e6;
+      border: none;
+    }
+    #registro h1{
+      margin-bottom: 5px;
+    }
+    #registro td{
+      text-align: center;
+    }
+    #registro input{
+      width: 100px;
+      margin-left: 30px;
+    }
+    #registro #escudoId{
+      left: 10px;
+      width: 250px;
+    }
+    #registro button span{
+      margin-left: 0px;
+    }
+    .informacion{
+      margin-left: -200px;
+      width: 400px;
+    }
+  }
+  @media (max-width: 900px) and (min-width: 600px) {
+    #acceso{
+      top:25px;
+      left: 61%;
+    }
+  }
+
+/*/////////////////////////PAGINA PRINCIPAL/////////////////////////////////*/
+
+  .fondo{
+    background: url(../Multimedia/imagen/fondo.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+  }
+  .sinScroll{
+    overflow-y: hidden;
+  }
+  /*/////////////////////////menu/////////////////////////////////////*/  
+  #menu{
+    background-color: #cccccc;
+    position: fixed;
+    top: 175px;
+    width: 280px;
+    border-radius: 0 0 11px 0;
+    box-shadow: 5px 5px 30px 2px black;
+    z-index: 61;
+  }
+  #menu ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display:flex;  /*para que se mantenga en posicion */
+    flex-direction:column; /*para decir si es horizontal o vertical */
+  }
+  #menu ul li{
+    flex-grow:1; /*lo expande y lo ajusta a la anchura del menu */
+  }
+  #menu ul li a {
+/*    background-color: #d9d9d9;*/
+    background-color: #f2f2f2;
+    color:black;
+    height: 57px;
+    font-weight:bold;
+    display:block;
+    margin-bottom:1px;
+    text-align:left;
+    text-decoration:none;
+    padding:1.3em;
+    white-space:nowrap;
+  }
+  #menu ul li a:hover {
+    background-color:#d9d9d9;
+    color:black;
+    text-decoration: none
+  }
+  #menu ul li:last-child a {
+    border-radius: 0 0 10px 0;
+  }
+  
+  .informacionUsuario{
+    background-color: #f2f2f2;
+    padding: 2em 1em;
+    height: 120px;
+  }
+  
+  .contenedorEscudo{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 2px 2px 6px #a2a2a2;
+  }
+  .escudoNull{
+    margin-top: 3px;
+    margin-left: 6px;
+    width:80%;
+    height: 90%;
+  }
+  .escudo{
+    width:100%;
+    height: 100%;
+  }
+  
+  .datos{
+    text-align: center;
+    width: 170px;
+    position: relative;
+    left: 70px;
+    top:-60px;
+  }
+  .nombreEquipo{
+    font-size: 18px;
+    margin: 0px;
+  }
+  
+  #cierreMenu{
+    position: fixed;
+    top: 175px;
+    left: 280px;
+    background-color: #f2f2f2;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    padding: 0.9em;
+    cursor: pointer;
+    z-index: 61;
+  }
+  
+  #seleccionado{
+    background-color: #d9d9d9;
+  }
+  
+    /*///////////////////////banner balon//////////////////////////////*/
+    .contenedorBanner{
+      position: absolute;
+      top:40%;
+      left: 50%;
+      /*background-color: red;*/
+      width: 68%;
+      height: 45%;
+      margin-left: -34%;
+      z-index: 49;
+    }
+    #balonBanner{
+      width: 20px;
+      height: 20px;
+      position: relative;
+      left: 50%;
+      top:79%;
+      box-shadow: 3px 4px 9px 1px black;
+      border-radius: 50%;
+      animation-duration: 3s;
+      animation-name: balonBotando;
+      animation-iteration-count: infinite;
+      /*animation-direction: alternate;*/
+    }  
+    
+    @keyframes balonBotando {
+      from {
+        top:79%;
+      }
+      25%{
+        top:68%;
+        
+      }
+      50%{
+        left:68%;
+      }
+      to {
+       top:0%;
+      }
+    }
+    
+  /*///////////////////////Posicion del campo/////////////////////////////*/
+  #contenedorCampo{
+    width: 100%;
+    position: absolute;
+  }
+  
+  #parteAltaCampo{
+    background: url(../Multimedia/imagen/mitadCampoAlta.png) no-repeat;
+    background-size: 90%;
+    position: relative; 
+    width: 1060px;
+    height: 221px;
+    top:30px;
+    left: 50%;
+    margin-left: -443px;
+  }
+  #parteBajaCampo{
+    background: url(../Multimedia/imagen/mitadCampoBaja.png) no-repeat;
+    background-size: 106.5%;
+    position: relative;
+    width: 1314px;
+    height: 581px;
+    top: -55px;
+    left: 50%;
+    margin-left: -664px;
+    z-index: 10;
+  }
+  
+  @media screen and (max-height: 800px) {
+    #parteAltaCampo{
+      background-size: 90%;
+      position: relative; 
+      width: 856px;
+      height: 221px;
+      top:0px;
+      left: 50%;
+      margin-left: -361px;
+    }
+    #parteBajaCampo{
+      background-size: 106.5%;
+      position: relative;
+      width: 1060px;
+      height: 581px;
+      top: -112px;
+      left: 50%;
+      margin-left: -539px;
+    }
+  }
+  
+  /*//////////////////////////Muestra jugadores del banquillo///////////////*/
+  #mostrarJugadores{
+    background-color: #d9d9d9; 
+    border-radius: 10px 10px 0px 0px;
+    position: absolute;
+    bottom: 0px;
+    height: 160px; 
+    width: 67%;
+    left: 50%;
+    margin-left: -33.5%;
+    z-index: 60;
+    overflow: hidden;
+  }
+  .contenedorBanquillo{
+    position: absolute;
+    top:35px;
+    left: 50%;
+    margin-left: -376.5px;
+    width: 751px;
+    height: 100%;
+  }
+  #btnMostrarJugadores{
+    background-color: #d9d9d9;
+    height: 30px; 
+    width: 100px;  
+    position: absolute;
+    bottom: 0px;
+    left: 50%; 
+    margin-left: -50px;
+    text-align: center;
+    cursor: pointer; 
+    border-radius: 50px 50px 0 0;
+    border: none;
+    z-index: 60;
+  }
+  #btnMostrarJugadores:hover{
+    background-color: #f2f2f2;
+    
+  }
+  #btnMostrarJugadores:focus{
+    outline:0px;
+  }
+  
+  /*////////////////////////////Muestra Alineaccion Jugadores/////////////////////////////*/
+  #contenedorJugadores{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+  }
+  .fichaJugador1{
+    background-color: white; 
+    width: 100px; 
+    height: 80px;
+    position: absolute;
+    left: 47.4%;
+    top: 73%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador2{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 37.9%;
+    top: 66%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador3{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 56.5%;
+    top: 66%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador4{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 67.5%;
+    top: 62%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador5{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 27%;
+    top: 62%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador6{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 47.5%;
+    top: 56%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador7{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 37.9%;
+    top: 51%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 51;
+  }
+  .fichaJugador8{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 56.5%;
+    top: 51%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 51;
+  }
+  .fichaJugador9{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 34.7%;
+    top: 39%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador10{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 60%;
+    top: 39%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador11{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 47.4%;
+    top: 37%;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador12{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 51;
+  }
+  .fichaJugador13{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 65px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 50;
+  }
+  .fichaJugador14{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 130px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 49;
+  }
+  .fichaJugador15{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 195px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 48;
+  }
+  .fichaJugador16{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 260px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 47;
+  }
+  .fichaJugador17{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 325px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 46;
+  }
+  .fichaJugador18{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 390px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 45;
+  }
+  .fichaJugador19{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 455px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 44;
+  }
+  .fichaJugador20{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 520px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 43;
+  }
+  .fichaJugador21{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 585px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 42;
+  }
+  .fichaJugador22{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 650px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 41;
+  }
+  .fichaJugador23{
+    background-color: white; 
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    left: 715px;
+    border-radius: 20px 20px 3px 3px;
+    box-shadow: 3px 2px 14px 1px black;
+    z-index: 40;
+  }
+  
+  /*efecto de aumento cuando pasa por encima*/
+  .banquillo{
+    transition: 0.5s ease;
+  }
+  
+  .banquillo:hover{
+    transform : scale(1.3);
+    z-index: 80;
+    
+  }
+  
+  /*///////////Drag and drog///////////////*/
+  [draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+  .jugCampo, .banquillo{
+    cursor:pointer;
+  }
+  .jugCampo.over, .banquillo.over{
+    border: 2px dashed #000;
+  }
+  
+  /*///////////////////////////////////////*/
+
+  .contenedorImagenJug{
+    width: 60px;
+    height: 60px;
+    float: right;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+  }
+  .contenedorImagenBanquillo{
+    width: 60px;
+    height: 60px;
+    float: right;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+  }
+  .imagenJugador{
+    position: relative;
+    top: 37px;
+    left:4px;
+    width: 54px;
+    transform: scale(2);
+  }
+  .imagenJugadorBanquillo{
+    position: relative;
+    top: 37px;
+    left:4px;
+    width: 54px;
+    transform: scale(2);
+  }
+  .imagenJugadorBanquilloNull{
+    position: relative;
+    top: 17px;
+    left:25px;
+    width: 12px;
+    transform: scale(2);
+  }
+  .nombrejugador{
+    text-align: center;
+    margin: 0px;
+    clear: both;
+  }
+  .nombrejugadorBanquillo{
+    text-align: center;
+    margin: 0px;
+    clear: both;
+  }
+  .contenedorImagenEqui{
+    width: 26px;
+    height: 30px;
+    position: relative;
+    left: 8px;
+    top:10px;
+    border-radius: 50px 20px 50px 50px;
+    float: left;
+  }
+  .imagenEquipo{
+    position: relative;
+    top: 3px;
+    left:8px;
+    width: 14px;
+    transform: scale(2);
+  }
+  .imagenEquipoBanquillo{
+    position: relative;
+    top: 3px;
+    left:8px;
+    width: 14px;
+    transform: scale(2);
+  }
+  .contenedorPosicion{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    top:40px;
+  }
+  .posicion{
+    position: absolute;
+    left: 12px;
+    top: 0px;
+  }
+  .contenedorPosicionBanquillo{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    top:40px;
+  }
+  .posicionBanquillo{
+    position: absolute;
+    left: 12px;
+    top: 0px;
+  }
+  .triangulo {
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 20px solid white; 
+    filter:drop-shadow(0px 6px 3px black);
+  }
+  .trianguloBanquillo {
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 20px solid white; 
+    filter:drop-shadow(0px 6px 3px black);
+  }
+  
+  .advertenciaSinLiga{
+    background-color: rgb(242, 242, 242);
+    position: absolute;
+    width: 28%;
+    height: 85px;;
+    left: 70%;
+    top:100%;
+    border-radius: 20px;
+    box-shadow: 4px 6px 18px 2px black;
+    z-index: 80; 
+    overflow: hidden;
+    opacity: 0.6;
+  }
+  .iconoAdvertencia{
+    position: relative;
+    left: 0px;
+    margin: 15px;
+    margin-left: 25px;
+  }
+  .textoAdvertencia{
+    position: relative;
+    top:-63px;
+    width: 300px;
+    left: 95px;
+    color: #333333;
+  }
+  .advertenciaSinLiga a:link{
+    text-decoration: none;
+  }
+  #cerrarAdvertencia{
+    position: relative;
+    top:-118px;
+    left: 93%;
+    cursor: pointer;
+  }
+  .advertenciaSinLiga:hover{
+    opacity:1;
+  }
+  
+  /*////////////////////RESPONSIVE DEL MENU//////////////////////////////*/
+  @media (max-width: 600px) {
+      /*///////////////menu/////////////////*/  
+      /*me quede aqui*/
+      #menu{
+        background-color: #f2f2f2;
+        position: fixed;
+        top:0px;
+        height: 100%;
+      }
+      #menu ul li a {
+        height: 57px;
+      }
+      #cierreMenu{
+        top: 0px;
+      }
+      /*/////////banner balon///////////////*/
+      .contenedorBanner{
+        visibility: hidden;
+      }
+      /*///////Posicion del campo///////////*/
+      #parteAltaCampo{
+        background-size: 72.5%;
+        top:25px;
+        left: 61.7%;
+      }
+      #parteBajaCampo{
+        background-size: 85.5%;
+        top: -110px;
+        left: 69%;
+        overflow: hidden;
+      }
+    }
+    @media (max-width: 800px) {
+      /*//////////////////////////Muestra jugadores del banquillo///////////////*/
+      #mostrarJugadores{
+        width: 100%;
+        left: 0%;
+        margin-left: 0%;
+      }
+      .nombrejugadorBanquillo{
+        visibility: hidden;
+        display: none;
+      }
+      .trianguloBanquillo {
+        margin-top: 64px;
+        border-left: 35px solid transparent;
+        border-right: 34px solid transparent;
+        border-top: 15px solid white; 
+        filter:drop-shadow(0px 6px 3px black);
+      }
+      /*//////////////Muestra Alineaccion Jugadores////////////////*/
+      .contenedorImagenEqui, .imagenEquipoBanquillo, .contenedorPosicion, .contenedorPosicionBanquillo{
+        visibility: hidden;
+        
+      }
+      .contenedorImagenJug{
+        margin-top:-30px;
+        margin-right: 7px;
+      }
+      .contenedorImagenBanquillo{
+        margin-top:-30px;
+      }
+      .fichaJugador1{
+        width: 88px; 
+        height: 80px;
+        position: absolute;
+        left: 44.6%;
+        top: 73%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador2{
+        width: 88px; 
+        height: 80px;
+        position: absolute;
+        left: 24.9%;
+        top: 66%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador3{
+        width: 88px; 
+        height: 80px;
+        position: absolute;
+        left: 64.5%;
+        top: 66%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador4{
+        width: 88px;  
+        height: 80px;
+        position: absolute;
+        left: 84.5%;
+        top: 62%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador5{
+        width: 88px;  
+        height: 80px;
+        position: absolute;
+        left: 5%;
+        top: 62%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador6{
+        width: 88px; 
+        height: 80px;
+        position: absolute;
+        left: 44.5%;
+        top: 56%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador7{
+        width: 88px;  
+        height: 80px;
+        position: absolute;
+        left: 23.9%;
+        top: 51%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 51;
+      }
+      .fichaJugador8{
+        width: 88px;  
+        height: 80px;
+        position: absolute;
+        left: 64.5%;
+        top: 51%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 51;
+      }
+      .fichaJugador9{
+        width: 88px; 
+        height: 80px;
+        position: absolute;
+        left: 18.7%;
+        top: 39%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador10{
+        width: 88px;  
+        height: 80px;
+        position: absolute;
+        left: 69%;
+        top: 39%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador11{
+        width: 88px; 
+        height: 80px;
+        position: absolute;
+        left: 43.6%;
+        top: 37%;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador12{
+        width: 70px;  
+        height: 65px;
+        position: absolute;
+        left: 28px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 51;
+      }
+      
+      .fichaJugador13{
+        width: 70px;  
+        height: 65px; 
+        position: absolute;
+        left: 90px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 50;
+      }
+      .fichaJugador14{
+        width: 70px;  
+        height: 65px; 
+        position: absolute;
+        left: 130px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 49;
+      }
+      .fichaJugador15{
+        width: 70px;    
+        height: 65px; 
+        position: absolute;
+        left: 195px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 48;
+      }
+      .fichaJugador16{
+        width: 70px;   
+        height: 65px; 
+        position: absolute;
+        left: 260px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 47;
+      }
+      .fichaJugador17{
+        width: 70px;    
+        height: 65px; 
+        position: absolute;
+        left: 325px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 46;
+      }
+      .fichaJugador18{
+        width: 70px;    
+        height: 65px; 
+        position: absolute;
+        left: 390px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 45;
+      }
+      .fichaJugador19{
+        width: 70px;   
+        height: 65px; 
+        position: absolute;
+        left: 455px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 44;
+      }
+      .fichaJugador20{
+        width: 70px;   
+        height: 65px; 
+        position: absolute;
+        left: 520px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 43;
+      }
+      .fichaJugador21{
+        width: 70px;  
+        height: 65px; 
+        position: absolute;
+        left: 585px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 42;
+      }
+      .fichaJugador22{
+        width: 70px;     
+        height: 65px; 
+        position: absolute;
+        left: 650px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 41;
+      }
+      .fichaJugador23{
+        width: 70px;   
+        height: 65px; 
+        position: absolute;
+        left: 715px;
+        border-radius: 20px 20px 3px 3px;
+        box-shadow: 3px 2px 14px 1px black;
+        z-index: 40;
+      }
+        
+      .triangulo {
+        width: 0; 
+        height: 0; 
+        border-left: 44px solid transparent;
+        border-right: 44px solid transparent;
+        border-top: 16px solid white; 
+        filter:drop-shadow(0px 6px 3px black);
+      }
+      
+      .advertenciaSinLiga{
+        visibility: hidden;
+        display: none;
+      }
+      /*/////////////////////////////Ajustes//////////////////////////////////*/
+  
+      #contenedorAjustes{
+        width: 100%;
+      }
+  }
+  
+  /*//////////////////////////Pagina de plantilla/////////////////////////////*/
+  
+  .contenedor{
+    width: 85%;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    margin-left: -42.5%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 25px;
+  }
+  .contenedor-inline{
+    display: inline-flex;
+  }
+  .plantillaContenedor{
+    background-color: white;
+    margin: 15px;
+    width: 200px;
+    height: 23%;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 16px;
+  }
+  
+  .plantillaEquipoContImg{
+    width: 26px;
+    height: 30px;
+    position: relative;
+    left: 8px;
+    top:10px;
+    border-radius: 50px 20px 50px 50px;
+    float: left;
+  }
+  .plantillaEquipoImg{
+    position: relative;
+    top: 3px;
+    left:15px;
+    width: 100%;
+    transform: scale(2);
+  }
+  
+  .plantillaContenedorPosicion{
+    position: relative;
+    width: 60px;
+    height: 30px;
+    top:70px;
+    left: -17px;
+  }
+  .plantillaPosicion{
+    position: relative;
+    left: 12px;
+    top: -10%;
+    text-align: center;
+  }
+  
+  .plantillaContenedorImagenJug{
+    position: relative;
+    top:-30px;
+    float: right;
+    width: 50%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 20px;
+    
+  }
+  .plantillaImagenJugador{
+    position: relative;
+    top: 65%;
+    left:4px;
+    width: 80px;
+    transform: scale(2);
+    
+  }
+  
+  .PlantillaNombreJugador{
+    position:relative;
+    top:-20px;
+    font-size: 15px;
+    clear: both;
+    width: 61%;
+    text-align: center;
+    left: -11px;
+  }
+  
+  #errorVender{
+    background-color: white;
+    padding: 40px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -200px;
+    margin-top: -100px;
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+    z-index: 50;
+    text-align: center; 
+    box-shadow: 5px 5px 17px 2px black;
+  }
+  #errorVender h3{
+    margin-top: 5px;
+  }
+  
+  .botonVender{
+    background-color: gainsboro;
+    position: relative;
+    top:-57px;
+    left: 95px;
+    padding: 2px 12px;
+    font-weight: bold;
+  }
+  
+  .contenedorPuntos{
+    position: relative;
+    left: 160px;
+    top: -200px;
+  }
+  .puntos{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+  .puntosVerde{
+    background-color: green;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+  }
+  .puntosRojo{
+    background-color: red;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+  }
+  .puntosNulos{
+    background-color: gainsboro;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /*////////////////////////////TRASPASOS////////////////////*/
+  
+  #buscar{
+    position: absolute;
+    top: 175px;
+    right: 0px;
+    background-color: #f2f2f2;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    padding: 0.8em;
+    cursor: pointer;
+    z-index: 70;
+  }
+  
+  #contenedorBusqueda{
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 175px;
+    right: 0px;
+    height: 470px;
+    border-radius: 0 0 0 11px;
+    box-shadow: 5px 5px 30px 2px black;
+    z-index: 60;
+  }
+  
+  .precio{
+    width: 70px;
+    margin-top: 12%;
+    margin-left: 5px;
+    text-align: center;
+  }
+  
+  .tituloBuscador{
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .tamañoBuscador {
+    width: 200px;
+  }
+  
+  .contenedorDinero{
+    text-align: center;
+  }
+  
+  .inputDinero{
+    width: 100px;
+    display: inline;
+  }
+  .nombreBuscador{
+    text-align: left;
+    margin-left: 45px;
+  }
+  
+  .botonFichar{
+    background-color: gainsboro;
+    position: relative;
+    top:-57px;
+    left: 95px;
+    padding: 2px 12px;
+    font-weight: bold;
+  }
+
+  .capaTranparenteFicha{
+    background-color: black;
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    z-index: 60;
+    opacity: 0;
+  }
+  
+  /* /////////////////////////////liga/////////////////////////////*/
+  .contenedorLiga{
+    margin-top: 3%;
+    width: 85%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    margin-left: -42.5%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 25px;
+  }
+  .contenedorLiga-inline{
+    display: inline-flex;
+  }
+  
+  .botonLiga{
+    background-color: #f2f2f2;
+    width: 200px;
+    height: 230px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 6px 3px 40px 2px black, inset 0px 0px 50px 0px rgba(0,0,0,0.37);
+    border: 3px solid #b1b0b0;
+  }
+  
+  .botonLiga:hover{
+    background-color: #ededed;
+    box-shadow: 0px 0px 40px 2px black, inset 0px 0px 63px 10px rgba(0,0,0,0.37);
+  }
+  
+  #formularioUnirteLiga{
+    background-color: #e6e6e6;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    z-index: 90;
+    text-align: center; 
+    box-shadow: 5px 5px 17px 2px black;
+  }
+  
+  #formularioCrearLiga{
+    background-color: #e6e6e6;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    z-index: 90;
+    text-align: center; 
+    box-shadow: 5px 5px 17px 2px black;
+  }
+  
+  #capaBloquearBotonesLiga{
+    background-color: black;
+    position: fixed;
+    bottom: 0px; 
+    right: 0px; 
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    opacity: 0.7;
+    z-index: 80;
+  }
+  
+  #formularioUnirteLiga .cerrar, #formularioCrearLiga .cerrar{
+    position: absolute;
+    top: 3%;
+    left: 84%;
+    background-color: #e6e6e6;
+    border: none;
+  }
+  #formularioUnirteLiga .cerrar:hover, #formularioCrearLiga .cerrar:hover{
+    background-color: #e2e1e1;
+  }
+  #formularioUnirteLiga .cerrar:focus, #formularioCrearLiga .cerrar:focus{
+    outline:0px;
+  }
+  .labelSeleccionaLiga{
+    margin-left: -80px;
+  }
+  
+  #seleccionaLiga{
+    margin-top: 5px;
+    width: 200px;
+  }
+  
+  .botonUnirte{
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #b3b3b3;
+  }
+  .botonUnirte:hover{
+    background-color: white;
+  }
+  
+  /*///////////////////////tabla Clasificacion///////////////////////////*/
+  #contenedorClasificacion{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+  }
+  #clasificacion th{
+    font-size: 20px;
+    border-top: none;
+    text-align: center;
+  }
+  td .contenedorEscudo{
+    margin:0px auto;
+  }
+  #clasificacion tr td{
+    vertical-align: middle;
+  }
+  
+  td .contenedorEscudo .escudoNull{
+    margin-left: 2px;
+  }
+  
+  /*/////////////////////////////Ajustes//////////////////////////////////*/
+  
+  #contenedorAjustes{
+    width: 80%;
+    height: 65%;
+    margin: 0 auto;
+    margin-top: 2%;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #tablaAjustes{
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    margin-top: 1.5%;
+  }
+  #tablaAjustes td{
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  #tablaAjustes tr td input{
+    background-color: white;
+  }
+  #tablaAjustes tr td input[type="file"]{
+    width: 455px;
+    margin: auto;
+  }  
+  #respuesta{
+    margin: -8px;
+  }
+  /*////boton borrar cuenta////*/
+  #botonBorrarCuenta{
+    background-color: transparent;
+    border: none;
+    color: red;
+    float: right;
+    margin-right: -30px;
+  }
+  #botonBorrarCuenta:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #botonBorrarCuenta:focus{
+    outline:0px;
+  }
+  tr:nth-child(6){
+    border-style: hidden;
+  }
+  
+ @media (max-width: 600px) {
+  
+      #contenedorAjustes{
+        width: 100%;
+        overflow-x: scroll;
+      }
+ }
+  /*//////////////////////////Administrador Menu/////////////////////////////*/
+  
+  #divTabla{
+    margin-top: 10px;
+    margin: 25px 100px 0px 100px;
+    /*border-radius: 15px 15px 14% 14%;*/
+  }
+  #tablaAdministrador{
+    width: 100%;
+    background-color: #fff;
+/*    border-radius: 20px;*/
+    text-align: center;
+  }
+  
+  #FuenteBotonBorrar{
+  color: white;
+  }
+  #FuenteBotonBorrar:hover{
+    text-decoration: none;
+  }
+  
+  .botonAnadir{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    bottom: 23px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    z-index: 998;
+    border-radius: 50px;
+    box-shadow:  3px 3px 2px 0px rgba(0,0,0,0.14);    
+  }
+  
+  /*//////////////////////SIN LOGUEAR/////////////////////////////*/
+  .divSinLoguear{
+    margin: 0 auto; 
+    margin: 20%;
+    
+  }
+  .sinLoguear{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+  }
